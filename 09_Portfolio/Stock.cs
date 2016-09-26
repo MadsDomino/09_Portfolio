@@ -2,7 +2,7 @@
 
 namespace _09_Portfolio
 {
-    internal class Stock
+    internal class Stock : IAsset
     {
         private string symbol;
         public string Symbol
@@ -48,7 +48,7 @@ namespace _09_Portfolio
             return PricePerShare * NumShares;
         }
 
-        public static double TotalValue(Stock[] stocks)
+        public static double TotalValue(IAsset[] stocks)
         {
             double result = 0;
             for (int i = 0; i < stocks.Length; i++)

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-/*namespace _09_Portfolio
+namespace _09_Portfolio
 {
     //Now things are getting trickier. Be sure to follow along in the index.html file, to see the purpose of the different tests
     //we will be creating here.
@@ -20,14 +20,14 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
         [TestMethod]
         public void InstanceOf()
         {
-            Assert.IsTrue(stockHP is Asset);
+            Assert.IsTrue(stockHP is IAsset);
         }
 
         [TestMethod]
         public void CD()
         {
             SavingsAccount cd = new SavingsAccount("Account 55555", 1000, 4.2);
-            Assert.IsTrue(cd is Asset);
+            Assert.IsTrue(cd is IAsset);
             Assert.AreEqual("SavingsAccount[value=1000.0,interestRate=4.2]", cd.ToString());
             Assert.AreEqual(1000, cd.GetValue());
             Assert.AreEqual(4.2, cd.InterestRate);
@@ -47,7 +47,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
         {
             SavingsAccount cd = new SavingsAccount("Account 55555", 1000, 3.2);
 
-            Asset[] portfolio = new Asset[3];
+            IAsset[] portfolio = new IAsset[3];
             portfolio[0] = stockHP;
             portfolio[1] = stockIBM;
             portfolio[2] = cd;
@@ -56,4 +56,4 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 
     }
-}*/
+}
