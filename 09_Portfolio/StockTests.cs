@@ -109,6 +109,6 @@ namespace _09_Portfolio
             Assert.IsTrue(!stock1.Equals(stock4));
         }
 
-
+    
     }
 }
