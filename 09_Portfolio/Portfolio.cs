@@ -5,19 +5,7 @@ namespace _09_Portfolio
 {
     internal class Portfolio
     {
-        private List<IAsset> stks = new List<IAsset>();
-        private List<IAsset> sks;
-        private List<IAsset> stocks
-        {
-            set
-            {
-                sks = value;
-            }
-            get
-            {
-                return sks;
-            }
-        }
+        private List<IAsset> stocks = new List<IAsset>();
 
         public Portfolio(List<IAsset> stocks)
         {
@@ -38,8 +26,7 @@ namespace _09_Portfolio
 
         public void AddAsset(IAsset stocks)
         {
-            stks.Add(stocks);
-            this.stocks = stks;
+            this.stocks.Add(stocks);
         }
     }
 }
